@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7ABF767C1DC1A86100ED99A2 /* DeviceSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF767B1DC1A86100ED99A2 /* DeviceSessionDelegate.swift */; };
+		7ABF767E1DC1AEF300ED99A2 /* WatchSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF767D1DC1AEF300ED99A2 /* WatchSessionDelegate.swift */; };
 		7AC442D81DBF0C0C0075904C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC442D71DBF0C0C0075904C /* AppDelegate.swift */; };
 		7AC442DA1DBF0C0C0075904C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC442D91DBF0C0C0075904C /* ViewController.swift */; };
 		7AC442DD1DBF0C0C0075904C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC442DB1DBF0C0C0075904C /* Main.storyboard */; };
@@ -73,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7ABF767B1DC1A86100ED99A2 /* DeviceSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSessionDelegate.swift; sourceTree = "<group>"; };
+		7ABF767D1DC1AEF300ED99A2 /* WatchSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionDelegate.swift; sourceTree = "<group>"; };
 		7AC442D41DBF0C0B0075904C /* WatchConnectivityDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchConnectivityDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC442D71DBF0C0C0075904C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC442D91DBF0C0C0075904C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC442D71DBF0C0C0075904C /* AppDelegate.swift */,
+				7ABF767B1DC1A86100ED99A2 /* DeviceSessionDelegate.swift */,
 				7AC442D91DBF0C0C0075904C /* ViewController.swift */,
 				7AC442DB1DBF0C0C0075904C /* Main.storyboard */,
 				7AC442DE1DBF0C0C0075904C /* Assets.xcassets */,
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC443071DBF0C0D0075904C /* InterfaceController.swift */,
+				7ABF767D1DC1AEF300ED99A2 /* WatchSessionDelegate.swift */,
 				7AC443091DBF0C0D0075904C /* ExtensionDelegate.swift */,
 				7AC4430B1DBF0C0D0075904C /* NotificationController.swift */,
 				7AC4430D1DBF0C0D0075904C /* Assets.xcassets */,
@@ -367,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC442DA1DBF0C0C0075904C /* ViewController.swift in Sources */,
+				7ABF767C1DC1A86100ED99A2 /* DeviceSessionDelegate.swift in Sources */,
 				7AC442D81DBF0C0C0075904C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +393,7 @@
 				7AC4430C1DBF0C0D0075904C /* NotificationController.swift in Sources */,
 				7AC4430A1DBF0C0D0075904C /* ExtensionDelegate.swift in Sources */,
 				7AC443081DBF0C0D0075904C /* InterfaceController.swift in Sources */,
+				7ABF767E1DC1AEF300ED99A2 /* WatchSessionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +681,7 @@
 				7AC443141DBF0C0D0075904C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AC443161DBF0C0D0075904C /* Build configuration list for PBXNativeTarget "WatchConnectivityDemo WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -681,6 +690,7 @@
 				7AC443181DBF0C0D0075904C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AC4431A1DBF0C0D0075904C /* Build configuration list for PBXNativeTarget "WatchConnectivityDemo" */ = {
 			isa = XCConfigurationList;
@@ -689,6 +699,7 @@
 				7AC4431C1DBF0C0D0075904C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AC4431D1DBF0C0D0075904C /* Build configuration list for PBXNativeTarget "WatchConnectivityDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -697,6 +708,7 @@
 				7AC4431F1DBF0C0D0075904C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

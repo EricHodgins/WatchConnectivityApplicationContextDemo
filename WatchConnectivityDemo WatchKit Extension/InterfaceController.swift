@@ -15,7 +15,6 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
     }
     
     override func willActivate() {
@@ -28,4 +27,13 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func sendMessageButtonPressed() {
+        print("Sending message to iPhone...")
+//        let delegate = WKExtension.shared().delegate as! ExtensionDelegate
+//        delegate.sendMessageToPhone()
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationMessageFromWatch), object: nil)
+        }
+        
+    }
 }

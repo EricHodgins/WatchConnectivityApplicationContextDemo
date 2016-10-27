@@ -9,11 +9,14 @@
 import UIKit
 import WatchConnectivity
 
+let NotificationButtonPressedOnPhone = "MessageSentOnPhoneNotification"
+let NotificationButtonPressedOnWatch = "MessageSentOnWatchNotification"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let sessionDelegate = DeviceSessionDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -43,36 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
-}
-
-extension AppDelegate: WCSessionDelegate {
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        print("Session became inactive.")
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        print("Session did deactivate.")
-    }
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        if let error = error {
-            print("Session activation error: \(activationState.rawValue) - \(error.localizedDescription)")
-            return
-        }
-        
-        print("Session activated with state: \(activationState.rawValue)")
-    }
     
     func setupWatchConnectivity() {
         if WCSession.isSupported() {
             let session = WCSession.default()
-            session.delegate = self
+            session.delegate = sessionDelegate
             session.activate()
         }
     }
+
+
 }
+
 
 
 
