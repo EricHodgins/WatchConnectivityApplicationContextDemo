@@ -15,10 +15,41 @@
                                 <action selector="sendMessageButtonPressed" destination="AgC-eL-Hgc" id="g0d-Ll-lUI"/>
                             </connections>
                         </button>
+                        <button width="1" height="70" alignment="left" title="Button" id="dG6-NH-4rz">
+                            <connections>
+                                <segue destination="KlC-ms-m9G" kind="push" id="8kG-Y0-zqY"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Messages Detail Controller-->
+        <scene sceneID="sNl-LN-fvE">
+            <objects>
+                <controller id="KlC-ms-m9G" customClass="MessagesDetailController" customModule="WatchConnectivityDemo_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="0tj-R0-gFi">
+                            <items>
+                                <tableRow identifier="PhoneMessage" selectable="NO" id="gle-qp-LbX" customClass="PhoneMessageRowController" customModule="WatchConnectivityDemo_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="gEd-jO-zpr">
+                                        <items>
+                                            <label alignment="left" text="Label" id="cK3-DU-LpD">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="phoneMessageLabel" destination="cK3-DU-LpD" id="Qbe-YS-hgR"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="451" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

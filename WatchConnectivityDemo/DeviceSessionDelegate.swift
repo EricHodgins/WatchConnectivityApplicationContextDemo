@@ -37,8 +37,8 @@ class DeviceSessionDelegate: NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         print("RECEIVED FROM ⌚️")
         if let message = applicationContext["message"] as? String {
-            print(message)
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationButtonPressedOnWatch), object: nil)
+            let userInfo: [String : String] = ["message" : message]
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationButtonPressedOnWatch), object: nil, userInfo: userInfo)
         }
     }
     

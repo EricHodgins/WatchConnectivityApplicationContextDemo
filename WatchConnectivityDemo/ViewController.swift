@@ -11,19 +11,19 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var messageFromWatchLabel: UILabel!
     
     var colors = [UIColor.red, UIColor.green, UIColor.blue, UIColor.black]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.watchSendMessageButtonPressed), name: NSNotification.Name(rawValue: NotificationButtonPressedOnWatch), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.watchSendMessageButtonPressed(notification:)), name: NSNotification.Name(rawValue: NotificationButtonPressedOnWatch), object: nil)
     }
 
 
     @IBAction func sendMessageButtonPressed(_ sender: AnyObject) {
         print("Sending from iPhone...")
-        //let delegate = UIApplication.shared.delegate as! AppDelegate
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationButtonPressedOnPhone), object: nil)
     }
     
@@ -36,10 +36,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
-    func watchSendMessageButtonPressed() {
+    func watchSendMessageButtonPressed(notification: Notification) {
         print("Receiving from watch...")
+        
         DispatchQueue.main.async {
-            self.changeBackgroundColor()
+            if let message = notification.userInfo?["message"] as? String {
+                self.messageFromWatchLabel.isHidden = false
+                self.messageFromWatchLabel.text = message
+            }
         }
     }
 }
