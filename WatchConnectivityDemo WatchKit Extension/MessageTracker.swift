@@ -10,7 +10,10 @@ import Foundation
 
 class MessageTracker {
     
-    var messages: [Message]
+    static let sharedInstance = MessageTracker()
+    private init () {}
+    
+    var messages = [Message]()
     
     func addMessage(message: String) {
         let message = Message(message)
@@ -22,7 +25,7 @@ class Message {
     
     let message: String
     
-    init(message: String) {
+    init(_ message: String) {
         self.message = message
     }
     

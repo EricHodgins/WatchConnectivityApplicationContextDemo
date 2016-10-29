@@ -40,6 +40,9 @@ class WatchSessionDelegate: NSObject, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         print("did receive message...📞")
+        if let message = applicationContext["message"] as? String {
+            MessageTracker.sharedInstance.addMessage(message: message)
+        }
     }
     
 }

@@ -17,8 +17,11 @@ class MessagesDetailController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        addRow(withMessage: "Cool")
-        
+        refreshTable()
+    }
+    
+    deinit {
+        print("Watch gone.")
     }
 
     override func willActivate() {
@@ -31,9 +34,43 @@ class MessagesDetailController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    func addRow(withMessage message: String) {
+    func addRow(withMessage message: String, atIndex index: Int) {
         
-        table.setNumberOfRows(10, withRowType: "PhoneMessage")
+        let controller = table.rowController(at: index) as! PhoneMessageRowController
+        controller.phoneMessageLabel.setText(message)
+    }
+    
+    func refreshTable() {
+        table.setNumberOfRows(MessageTracker.sharedInstance.messages.count, withRowType: "PhoneMessage")
+        
+        for (index, message) in MessageTracker.sharedInstance.messages.enumerated() {
+            addRow(withMessage: message.message, atIndex: index)
+        }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

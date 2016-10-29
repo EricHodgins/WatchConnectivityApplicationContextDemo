@@ -29,8 +29,7 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func sendMessageButtonPressed() {
         print("Sending message to iPhone...")
-//        let delegate = WKExtension.shared().delegate as! ExtensionDelegate
-//        delegate.sendMessageToPhone()
+
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationMessageFromWatch), object: nil)
         }
