@@ -47,6 +47,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="0tj-R0-gFi" id="n6m-bL-nGU"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="451" y="345"/>

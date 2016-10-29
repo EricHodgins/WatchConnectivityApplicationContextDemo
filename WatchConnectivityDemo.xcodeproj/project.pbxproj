@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AA3510B1DC443370039D350 /* MessageTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA3510A1DC443370039D350 /* MessageTracker.swift */; };
 		7AB274361DC2F9D000307DAF /* MessagesDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB274351DC2F9CF00307DAF /* MessagesDetailController.swift */; };
 		7AB274381DC2FA7F00307DAF /* PhoneMessageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB274371DC2FA7F00307DAF /* PhoneMessageRowController.swift */; };
 		7ABF767C1DC1A86100ED99A2 /* DeviceSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF767B1DC1A86100ED99A2 /* DeviceSessionDelegate.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7AA3510A1DC443370039D350 /* MessageTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTracker.swift; sourceTree = "<group>"; };
 		7AB274351DC2F9CF00307DAF /* MessagesDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesDetailController.swift; sourceTree = "<group>"; };
 		7AB274371DC2FA7F00307DAF /* PhoneMessageRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneMessageRowController.swift; sourceTree = "<group>"; };
 		7ABF767B1DC1A86100ED99A2 /* DeviceSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSessionDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC443071DBF0C0D0075904C /* InterfaceController.swift */,
+				7AA3510A1DC443370039D350 /* MessageTracker.swift */,
 				7AB274371DC2FA7F00307DAF /* PhoneMessageRowController.swift */,
 				7AB274351DC2F9CF00307DAF /* MessagesDetailController.swift */,
 				7ABF767D1DC1AEF300ED99A2 /* WatchSessionDelegate.swift */,
@@ -398,6 +401,7 @@
 			files = (
 				7AC4430C1DBF0C0D0075904C /* NotificationController.swift in Sources */,
 				7AC4430A1DBF0C0D0075904C /* ExtensionDelegate.swift in Sources */,
+				7AA3510B1DC443370039D350 /* MessageTracker.swift in Sources */,
 				7AC443081DBF0C0D0075904C /* InterfaceController.swift in Sources */,
 				7ABF767E1DC1AEF300ED99A2 /* WatchSessionDelegate.swift in Sources */,
 				7AB274361DC2F9D000307DAF /* MessagesDetailController.swift in Sources */,
